@@ -1,0 +1,1 @@
+DELETE FROM UserGroup WHERE id=@id;
