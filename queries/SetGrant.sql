@@ -1,1 +1,1 @@
-INSERT INTO UserGroup(groupname, resource, action, subresource) VALUES(@groupname,@resource,@action,@subresource);
+INSERT INTO GroupGrant(groupname, resource, action, subresource) VALUES(@groupname,@resource,@action,@subresource);
