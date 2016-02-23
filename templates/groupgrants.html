@@ -1,0 +1,51 @@
+<form method="post" action="{% baseurl %}/add">
+	<fieldset>
+		<legend>Grant group access to resources</legend>
+		<div id="groupbox">
+			<span class="title">
+				Groups
+			</span>
+			<ul>
+				{% groups %}
+			</ul>
+		</div>
+		<div id="resourcesbox">
+			<span class="title">
+				Resources
+			</span>
+			<ul>
+				{% resources %}
+			</ul>
+		</div>
+		<div id="subresourcesbox">
+			<span class="title">
+				Subresource
+			</span>
+			<input type="text" name="subresource" value="{% subresource %}">
+		</div>
+		<div id="actionbox">
+			<span class="title">
+				Action
+			</span>
+			<ul>
+				{% actions %}
+			</ul>
+		</div>
+		<input type="submit" value="Add">
+	</fieldset>
+</form>
+
+<form method="post" action="{% baseurl %}/remove">
+	<fieldset>
+		<legend>Remove user from group</legend>
+		<div id="memberbox">
+			<span class="title">
+				Members
+			</span>
+			<ul>
+				{% memberships %}
+			</ul>
+		</div>
+		<input type="submit" value="Remove">
+	</fieldset>
+</form>
