@@ -37,13 +37,13 @@
 
 <form method="post" action="{% baseurl %}/remove">
 	<fieldset>
-		<legend>Remove user from group</legend>
+		<legend>Remove grant from group</legend>
 		<div id="memberbox">
 			<span class="title">
-				Members
+				Group grants
 			</span>
 			<ul>
-				{% memberships %}
+				{% groupgrants %}
 			</ul>
 		</div>
 		<input type="submit" value="Remove">

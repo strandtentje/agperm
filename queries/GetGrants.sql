@@ -1,2 +1,2 @@
-SELECT groupname, resource, action, subresource FROM GroupGrant
+SELECT id, groupname, resource, action, subresource FROM GroupGrant
 ORDER BY groupname, resource, subresource, action;
