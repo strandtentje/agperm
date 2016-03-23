@@ -35,6 +35,34 @@
 	</fieldset>
 </form>
 
+<form method="post" action="{% baseurl %}/add">
+	<fieldset>
+		<legend>Grant undefined group access to undefined resources</legend>
+
+		<div>
+			<label for="groupname">groupname</label>
+			<input type="text" name="groupname" id="groupname" value="{% groupname %}">
+		</div>
+
+		<div>
+			<label for="resource">resource</label>
+			<input type="text" name="resource" id="resource" value="{% resource %}">
+		</div>
+		
+		<div>
+			<label for="subresource">subresource</label>
+			<input type="text" name="subresource" id="subresource" value="{% subresource %}">
+		</div>
+		
+		<div>
+			<label for="action">action</label>
+			<input type="text" name="action" id="action" value="{% action %}">
+		</div>
+
+		<input type="submit" value="Add">
+	</fieldset>
+</form>
+
 <form method="post" action="{% baseurl %}/remove">
 	<fieldset>
 		<legend>Remove grant from group</legend>
