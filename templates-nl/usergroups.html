@@ -1,0 +1,50 @@
+<form method="post" action="{% baseurl %}/add">
+	<fieldset>
+		<legend>Groepsleden</legend>
+		<div id="userbox">
+			<span class="title">
+				Gebruikers
+			</span>
+			<ul>
+				{% users %}
+			</ul>
+		</div>
+		<div id="groupbox">
+			<span class="title">
+				Groepen
+			</span>
+			<ul>
+				{% groups %}
+			</ul>
+		</div>
+		<input type="submit" value="Add">
+	</fieldset>
+</form>
+
+<form method="post" action="{% baseurl %}/add">
+	<fieldset>
+		<legend>Groepsleden (geadvanceerd)</legend>
+		<label for="username">Gebruiker</label>
+		<input type="text" name="username" value="{% username %}">
+	
+		<label for="groupname">Groepsnaam</label>
+		<input type="text" name="groupname" value="{% groupname %}">
+
+		<input type="submit" value="Add">
+	</fieldset>
+</form>
+
+<form method="post" action="{% baseurl %}/remove">
+	<fieldset>
+		<legend>Groepsleden ongedaan maken</legend>
+		<div id="memberbox">
+			<span class="title">
+				Lidmaatschappen
+			</span>
+			<ul>
+				{% memberships %}
+			</ul>
+		</div>
+		<input type="submit" value="Remove">
+	</fieldset>
+</form>

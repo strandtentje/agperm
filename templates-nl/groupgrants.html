@@ -1,0 +1,79 @@
+<form method="post" action="{% baseurl %}/add">
+	<fieldset>
+		<legend>Groepstoegang tot voorzieningen</legend>
+		<div id="groupbox">
+			<span class="title">
+				Groepen
+			</span>
+			<ul>
+				{% groups %}
+			</ul>
+		</div>
+		<div id="resourcesbox">
+			<span class="title">
+				Voorzieningen
+			</span>
+			<ul>
+				{% resources %}
+			</ul>
+		</div>
+		<div id="subresourcesbox">
+			<span class="title">
+				Onderdelen
+			</span>
+			<input type="text" name="subresource" value="{% subresource %}">
+		</div>
+		<div id="actionbox">
+			<span class="title">
+				Acties
+			</span>
+			<ul>
+				{% actions %}
+			</ul>
+		</div>
+		<input type="submit" value="Add">
+	</fieldset>
+</form>
+
+<form method="post" action="{% baseurl %}/add">
+	<fieldset>
+		<legend>Groepstoegang tot voorzieningen (Geadvanceerd)</legend>
+
+		<div>
+			<label for="groupname">groepsnaam</label>
+			<input type="text" name="groupname" id="groupname" value="{% groupname %}">
+		</div>
+
+		<div>
+			<label for="resource">voorziening</label>
+			<input type="text" name="resource" id="resource" value="{% resource %}">
+		</div>
+		
+		<div>
+			<label for="subresource">onderdeel</label>
+			<input type="text" name="subresource" id="subresource" value="{% subresource %}">
+		</div>
+		
+		<div>
+			<label for="action">actie</label>
+			<input type="text" name="action" id="action" value="{% action %}">
+		</div>
+
+		<input type="submit" value="Add">
+	</fieldset>
+</form>
+
+<form method="post" action="{% baseurl %}/remove">
+	<fieldset>
+		<legend>Groepstoegang ongedaan maken</legend>
+		<div id="memberbox">
+			<span class="title">
+				Groepsmachtigingen
+			</span>
+			<ul>
+				{% groupgrants %}
+			</ul>
+		</div>
+		<input type="submit" value="Remove">
+	</fieldset>
+</form>
