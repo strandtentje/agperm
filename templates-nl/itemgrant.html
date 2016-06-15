@@ -1,0 +1,7 @@
+<form method="post" action="{% baseurl %}/add">
+    <input type="hidden" name="groupname" value="{% groupname %}">
+    <input type="hidden" name="action" value="{% action %}">
+    <input type="hidden" name="resource" value="{% resource %}">
+    <input type="hidden" name="subresource" value="{% subresource %}">
+    <input type="submit" value="Grant to '{% groupname %}'">
+</form>
