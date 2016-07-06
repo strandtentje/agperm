@@ -1,5 +1,6 @@
 SELECT 
-	* 
+    `UserGroup`.id AS usergroupid,
+	`GroupGrant`.id AS groupgrantid
 FROM 
 	`UserGroup` 
 	JOIN `GroupGrant` ON
